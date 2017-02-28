@@ -24,3 +24,7 @@
 /configure.log
 
 .DS_Store
+
+/buck-out/
+/.buckd/
+.buckconfig.local
