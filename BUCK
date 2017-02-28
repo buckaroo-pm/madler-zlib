@@ -12,6 +12,9 @@ genrule(
 cxx_library(
   name = 'zlib',
   header_namespace = 'zlib', 
+  exported_headers = glob([
+    '*.h',
+  ]),
   srcs = glob([
     '*.c',
   ]),
