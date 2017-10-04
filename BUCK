@@ -1,3 +1,5 @@
+include_defs('//BUCKAROO_DEPS')
+
 genrule(
   name = 'configure',
   out = 'out',
@@ -21,6 +23,7 @@ cxx_library(
   preprocessor_flags = [
     '-DMY_ZCALLOC=1',
   ],
+  deps = BUCKAROO_DEPS,
   visibility = [
     'PUBLIC',
   ],
