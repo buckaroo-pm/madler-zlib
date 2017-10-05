@@ -18,9 +18,6 @@ cxx_library(
   srcs = glob([
     '*.c',
   ]),
-  preprocessor_flags = [
-    '-DMY_ZCALLOC=1',
-  ],
   visibility = [
     'PUBLIC',
   ],
