@@ -2,5 +2,6 @@
   ignore = .git, .buckd
 
 [cxx]
+  should_remap_host_platform = true
   untracked_headers = warn
   untracked_headers_whitelist = /usr/include/errno.h, /usr/include/fcntl.h, /usr/include/alloca.h, /usr/include/_types/.*, /usr/include/stdint.h, /usr/include/mach/.*, /usr/include/stdlib.h, /usr/include/secure/.*, /usr/include/_types.h, /usr/include/strings.h, /usr/include/string.h, /usr/include/libkern/.*, /usr/include/Availability.h, /usr/include/AvailabilityInternal.h, /usr/include/i386/.*, /usr/include/machine/.*, /usr/include/sys/.*, /usr/include/limits.h, /usr/include/stdio.h, /usr/local/Cellar/llvm/.*
