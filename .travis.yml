@@ -15,6 +15,11 @@ addons:
     packages:
       - buck
 
+cache:
+  directories:
+    - $HOME/.buckaroo/cache
+    - $HOME/Library/Caches/Homebrew
+
 os:
   - linux
   - osx
