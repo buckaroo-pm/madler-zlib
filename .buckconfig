@@ -11,3 +11,7 @@
 [cxx#linux-x86_64]
   should_remap_host_platform = true
   cflags = -Wno-implicit-function-declaration
+
+[cxx#macosx-x86_64]
+  should_remap_host_platform = true
+  cflags = -Wno-implicit-function-declaration
