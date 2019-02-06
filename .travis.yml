@@ -9,23 +9,19 @@ addons:
     packages:
       - g++-6
       - gcc-6
-  homebrew:
-    taps:
-      - facebook/fb
-    packages:
-      - buck
 
 cache:
   directories:
     - $HOME/.buckaroo/cache
     - $HOME/Library/Caches/Homebrew
+    - $TRAVIS_BUILD_DIR/bin
 
 os:
   - linux
   - osx
 
 env:
-  - BUCKAROO_VERSION=buckaroo-redux-alpha-14
+  - BUCKAROO_VERSION=v2.0.0
 
 osx_image: xcode9.3
 
@@ -33,7 +29,7 @@ before_install:
   - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
-  - ./buckaroo-client install
-  - buck build -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //:zlib
-  - buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:example
-  - buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:infcover
+  - ./bin/buckaroo install
+  - ./bin/buck build -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //:zlib
+  - ./bin/buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:example
+  - ./bin/buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:infcover
