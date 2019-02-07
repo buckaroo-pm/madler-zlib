@@ -1,19 +1,64 @@
 cxx_binary(
-  name = 'enough', 
+  name = 'enough',
   srcs = [
-    'enough.c', 
-  ], 
+    'enough.c',
+  ],
   deps = [
-    '//:zlib', 
+    '//:zlib',
   ],
 )
 
 cxx_binary(
-  name = 'gun', 
+  name = 'gun',
   srcs = [
-    'gun.c', 
-  ], 
+    'gun.c',
+  ],
   deps = [
-    '//:zlib', 
+    '//:zlib',
   ],
 )
+
+cxx_library(
+  name = 'gzlog',
+  header_namespace = '',
+  exported_headers = [
+    'gzlog.h',
+  ],
+  srcs = [
+    'gzlog.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
+cxx_binary(
+  name = 'gzjoin',
+  srcs = [
+    'gzjoin.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
+cxx_binary(
+  name = 'zran',
+  srcs = [
+    'zran.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
+cxx_binary(
+  name = 'zpipe',
+  srcs = [
+    'zpipe.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
