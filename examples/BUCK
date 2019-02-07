@@ -1,0 +1,19 @@
+cxx_binary(
+  name = 'enough', 
+  srcs = [
+    'enough.c', 
+  ], 
+  deps = [
+    '//:zlib', 
+  ],
+)
+
+cxx_binary(
+  name = 'gun', 
+  srcs = [
+    'gun.c', 
+  ], 
+  deps = [
+    '//:zlib', 
+  ],
+)
