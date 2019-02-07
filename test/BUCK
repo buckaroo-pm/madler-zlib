@@ -1,0 +1,29 @@
+cxx_binary(
+  name = 'example',
+  srcs = [
+    'example.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
+cxx_binary(
+  name = 'infcover',
+  srcs = [
+    'infcover.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)
+
+cxx_binary(
+  name = 'minigzip',
+  srcs = [
+    'minigzip.c',
+  ],
+  deps = [
+    '//:zlib',
+  ],
+)

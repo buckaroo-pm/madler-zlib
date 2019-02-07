@@ -22,5 +22,12 @@
 /minigzipsh
 /zlib.pc
 /configure.log
+foo.gz
 
 .DS_Store
+
+/buck-out/
+/.buckd/
+.buckconfig.local
+.buckconfig.d
+buckaroo_macros.bzl
