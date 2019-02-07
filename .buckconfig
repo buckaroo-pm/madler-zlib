@@ -1,0 +1,17 @@
+[project]
+  ignore = .git, .buckd
+
+[parser]
+  default_build_file_syntax = SKYLARK
+
+[cxx]
+  should_remap_host_platform = true
+  untracked_headers_whitelist = /usr/include/errno.h, /usr/include/stdc-predef.h, /usr/include/features.h, /usr/include/endian.h, /usr/include/linux/.*, /usr/include/fcntl.h, /usr/include/alloca.h, /usr/include/_types/.*, /usr/include/stdint.h, /usr/include/mach/.*, /usr/include/stdlib.h, /usr/include/secure/.*, /usr/include/_types.h, /usr/include/strings.h, /usr/include/string.h, /usr/include/libkern/.*, /usr/include/Availability.h, /usr/include/AvailabilityInternal.h, /usr/include/i386/.*, /usr/include/machine/.*, /usr/include/sys/.*, /usr/include/limits.h, /usr/include/stdio.h, /usr/local/Cellar/llvm/.*, /usr/include/x86_64-linux-gnu/.*, /usr/lib/gcc/.*, /usr/include/asm-generic/.*, /usr/include/assert.h, /usr/include/libio.h, /usr/include/_G_config.h, /usr/include/wchar.h, /usr/include/time.h, /usr/include/xlocale.h
+
+[cxx#linux-x86_64]
+  should_remap_host_platform = true
+  cflags = -Wno-implicit-function-declaration
+
+[cxx#macosx-x86_64]
+  should_remap_host_platform = true
+  cflags = -Wno-implicit-function-declaration
