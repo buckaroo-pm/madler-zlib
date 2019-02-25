@@ -8,7 +8,7 @@ cxx_library(
     '*.c',
   ]),
   preprocessor_flags = [
-    '-DMY_ZCALLOC=1',
+    # '-DMY_ZCALLOC=1',
   ],
   visibility = [
     'PUBLIC',
