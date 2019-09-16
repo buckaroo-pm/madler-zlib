@@ -2,6 +2,8 @@
 
 choco install buckaroo
 
+export MSYS2_ARG_CONV_EXCL="//"
+
 if [ $BUCKAROO_USE_BAZEL ]
 then
 
