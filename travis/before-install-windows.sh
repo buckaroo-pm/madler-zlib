@@ -13,10 +13,10 @@ choco install zip
 choco install unzip
 choco install buck
 
-ps 'refreshenv'
-ps 'set-executionpolicy unrestricted'
-ps 'Install-Module -Name PSCX -AllowClobber'
-ps 'Install-Module -Name VSSetup -AllowClobber'
-ps 'Import-VisualStudioVars 2017 amd64'
+powershell -Command 'refreshenv'
+powershell -Command 'set-executionpolicy unrestricted'
+powershell -Command 'Install-Module -Name PSCX -AllowClobber'
+powershell -Command 'Install-Module -Name VSSetup -AllowClobber'
+powershell -Command 'Import-VisualStudioVars 2017 amd64'
 
 fi

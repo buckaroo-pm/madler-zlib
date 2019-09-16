@@ -5,10 +5,10 @@ buckaroo install
 if [ $BUCKAROO_USE_BAZEL ]
 then
 
-bazel build //:zlib
-bazel build //test:example
-bazel build //test:infcover
-bazel build //test:minigzip
+bazel build '//:zlib'
+bazel build '//test:example'
+bazel build '//test:infcover'
+bazel build '//test:minigzip'
 
 else
 
