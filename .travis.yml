@@ -1,6 +1,6 @@
 language: cpp
 sudo: true
-dist: trusty
+dist: bionic
 
 addons:
   apt:
@@ -9,19 +9,27 @@ addons:
     packages:
       - g++-6
       - gcc-6
-
-cache:
-  directories:
-    - $HOME/.buckaroo/cache
-    - $HOME/Library/Caches/Homebrew
-    - $TRAVIS_BUILD_DIR/bin
+      - make
+      - pkg-config
+      - zip
+      - g++
+      - zlib1g-dev
+      - unzip
+      - python3
 
 os:
   - linux
   - osx
+  - windows
 
 env:
-  - BUCKAROO_VERSION=v2.0.0
+  - BUCKAROO_VERSION=v2.2.0 PKG_CONFIG_PATH=/usr/lib/pkgconfig
+  - BUCKAROO_VERSION=bazel-alpha-1 BUCKAROO_USE_BAZEL=1 PKG_CONFIG_PATH=/usr/lib/pkgconfig
+
+cache:
+  directories:
+    - $HOME/.buckaroo/cache
+    - $TRAVIS_BUILD_DIR/bin
 
 osx_image: xcode9.3
 
@@ -29,7 +37,4 @@ before_install:
   - ./travis/before-install-$TRAVIS_OS_NAME.sh
 
 script:
-  - ./bin/buckaroo install
-  - ./bin/buck build -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //:zlib
-  - ./bin/buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:example
-  - ./bin/buck run -c ui.superconsole=DISABLED -c cxx.untracked_headers=error //test:infcover
+  - ./travis/script.sh
